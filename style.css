@@ -820,6 +820,15 @@ footer{
     .home .conteudo-home a{
         font-size: 18px;
     }
+
+    .home .coluna-direita{
+        display: none;
+    }
+
+    .home .coluna-esquerda{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 700px){
@@ -948,3 +957,4 @@ footer{
         font-size: 14px;
     }
 }
+
