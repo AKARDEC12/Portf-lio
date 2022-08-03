@@ -956,5 +956,9 @@ footer{
     .projetos .titulo::after{
         font-size: 14px;
     }
+
+    .conhecimentos .titulo::after{
+        font-size: 14px;
+    }
 }
 
