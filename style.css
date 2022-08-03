@@ -1,0 +1,950 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400;1,500&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*nav bar -- inicio*/
+
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    font-family: 'Ubunto', sans-serif;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    background: rgb(0,0, 0, 0.5);
+    padding: 15px 0;
+}
+
+.navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 300px;
+    height: 40px;
+    position: relative;
+}
+
+/*.animationPosition{
+    position: absolute;
+    animation: position 2s linear infinite;
+}
+
+@keyframes position{
+    0%{
+        top: 0;
+        left: calc(0% + 20px);
+    }
+
+    50%{
+        top: 0;
+        left: calc(100% + 50px);
+    }
+
+    100%{
+        top: 0;
+        left: calc(0% + 20px);
+    }
+}*/
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.navbar .logo a span{
+    color: yellow;
+    bottom: 0;
+    left: 0;
+}
+
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: yellow;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.navbar .menu li a:hover{
+    color: #000;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+/*INICIO*/
+
+.home{
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(45deg, black, black, rgb(192, 192, 0)) ;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubunto', sans-serif;
+}
+
+
+
+.conteudo-home .coluna-esquerda{
+    width: 55%;
+}
+
+.conteudo-home .coluna-direita{
+    width: 30%;
+}
+
+
+.home .container{
+    margin: auto 0 0 500px;
+    
+}
+
+.home .conteudo-home .texto-1{
+    font-size: 27px;
+}
+
+.home .conteudo-home .texto-2{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .conteudo-home .texto-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .conteudo-home .texto-3 span{
+    color: rgb(255, 255, 0);
+    font-weight: 500;
+}
+
+.contato {
+    display: flex;
+    text-align: center;
+    margin-top: 80px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.contato .btn-1{
+    border: 1px solid white;
+    width: 250px;
+    padding: 8px;
+    border-radius: 32px;
+}
+
+.contato .btn-1 a{
+    color: #fff;
+}
+
+.contato .btn-1:hover{
+    background: #fff;
+    border: 3px solid purple;
+    transition: 0.5s ease;
+}
+
+.contato .btn-1:hover a{
+    color: #000;
+    font-weight: 700;
+}
+
+
+.contato .btn-2{
+    border: 1px solid white;
+    width: 250px;
+    padding: 8px;
+    border-radius: 32px;
+}
+
+.contato .btn-2 a{
+    color: #fff;
+}
+
+.contato .btn-2:hover{
+    background: rgb(6, 72, 214);
+    border: 3px solid #fff;
+    transition: 0.5s ease;
+}
+
+.contato .btn-2:hover a{
+    color: #fff;
+    font-weight: 700;
+}
+
+/*  ESTILOS IGUAIS  */
+section{
+    padding: 100px 0;
+}
+section .titulo{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+section .titulo::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #000;
+    transform: translateX(-50%);
+}
+section .titulo::after{
+    position: absolute;
+    bottom:-12px;
+    left: 50%;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.sobre-mim, .projetos, .conhecimentos #more{
+    font-family: 'Roboto', sans-serif;
+}
+.sobre-mim .conteudo-sobre-mim,
+.conteudo-home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*SOBRE MIM*/
+
+
+.sobre-mim .titulo::after{
+    content: "Quem sou eu";
+    background: #fff;
+    color: rgb(184, 184, 0);
+}
+
+
+.sobre-mim .conteudo-sobre-mim .left{
+    width: 45%;
+}
+
+.sobre-mim .conteudo-sobre-mim .right{
+    width: 55%;
+}
+
+.sobre-mim .conteudo-sobre-mim .right .texto{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.sobre-mim .conteudo-sobre-mim .right .texto span{
+    color: rgb(184, 184, 0);
+}
+
+.sobre-mim .conteudo-sobre-mim .right p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.sobre-mim .conteudo-sobre-mim .right a{
+    display: inline-block;
+    background-color: rgb(184, 184, 0);
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 32px;
+    border: 2px solid rgb(184, 184, 0);
+    transition: all 0.3s ease;
+}
+
+.sobre-mim .conteudo-sobre-mim .right a:hover{
+    background: #000;
+    color: rgb(184, 184, 0);  
+}
+
+.sobre-mim .conteudo-sobre-mim .left img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 7px;
+    
+}
+
+.left:hover img{
+    border: 3px solid black;
+} 
+
+/*PROJETOS*/
+.projetos{
+    background: #000;
+    color: #fff;
+}
+
+.projetos .titulo::before{
+    background: #fff;
+}
+
+.projetos .titulo::after{
+    color: rgb(184, 184, 0);
+    background: #000;
+    content: "Com dedicação";
+}
+
+.projetos .carousel .card{
+    background: #111;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.projetos .carousel .card:hover{
+    background: rgb(184, 184, 0);
+}
+
+.projetos .carousel .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #000;
+    transition: all 0.3s ease;
+}
+
+.projetos .carousel .card:hover img{
+    border-color: #fff;
+}
+
+.projetos .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3 ease;
+}
+
+.projetos .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+
+.projetos .carousel .card .box .texto{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(184, 184, 0);
+    margin: 10px 0 7px 0;
+    transition: all 0.3s ease;
+}
+
+.projetos .carousel .card:hover .texto{
+    color: #000;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    width: 14px;
+    height: 14px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid rgb(184, 184, 0)!important;
+    transition: all 0.3 ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(184, 184, 0)!important;
+}
+
+/*CONHECIMENTOS*/
+
+.conhecimentos .titulo::after{
+    content: "Que possuo";
+    color: rgb(184, 184, 0);
+}
+
+.conteudo-conhecimentos{
+    background: #111;
+}
+
+.linguagem{
+    width: 31%;
+    margin: 1% 1%;
+    display: inline-block;
+    padding: 15px;
+    background: #000;    
+    
+}
+
+
+.linguagem:hover{
+    background-color: rgb(184, 184, 0);
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.linguagem h3{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.linguagem:hover h3{
+    color: #000;
+    font-weight: 700;
+}
+
+.linguagem p{
+    display: none;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.linguagem:hover p{
+    display: flex;
+    color: #000;
+}
+
+.imagem{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+#img-1{
+    background-image: url(/img/html5.png);
+    
+}
+
+#img-2{
+    background-image: url(/img/css.png); 
+}
+
+#img-3{
+    background-image: url(/img/js.png);
+    
+}
+
+#img-4{
+    background-image: url(/img/python.png);
+    
+}
+
+#img-5{
+    background-image: url(/img/bootstrap.svg);
+    
+}
+
+#img-6{
+    background-image: url(/img/jquery.png);
+    
+}
+
+#img-7{
+    background-image: url(/img/git.png);
+    
+}
+
+#img-8{
+    background-image: url(/img/java.png);
+    
+}
+
+#img-9{
+    background-image: url(/img/php.png);
+    
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+}
+
+#ocultos{
+    display: none;
+}
+
+#more{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    background: #000;
+    color: rgb(184, 184, 0);
+    font-weight: 700;
+    font-size: 20px;
+    border: 3px solid rgb(184, 184, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: -10px;
+    margin-top: 30px;
+}
+
+#more:hover{
+    background: rgb(184, 184, 0);
+    color: #000;
+    border: 3px solid #000;
+}
+
+.botao2{
+    display: none;
+    justify-content: center;
+}
+
+#less{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    background: #000;
+    color: rgb(184, 184, 0);
+    font-weight: 700;
+    font-size: 20px;
+    border: 3px solid rgb(184, 184, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#less:hover{
+    background: rgb(184, 184, 0);
+    color: #000;
+    border: 3px solid #000;
+}
+
+
+
+
+/*Footer*/
+footer{
+    background-color: #111;
+    color: #fff;
+    border-top: 3px solid rgb(150, 150, 0);
+    text-align: center;
+    padding: 60px;
+    font-size: 20px;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+/*MENU - CELULAR*/
+.btn-menu{
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    display: none;
+}
+
+/*REPONSIVO*/
+
+@media (max-width: 2050px){
+    .home .container{
+        margin: auto 0 0 450px;
+    }
+}
+
+@media (max-width: 2000px){
+    .home .container{
+        margin: auto 0 0 400px;
+    }
+}
+
+@media (max-width: 1950px){
+    .home .container{
+        margin: auto 0 0 350px;
+    }
+}
+
+@media (max-width: 1900px){
+    .home .container{
+        margin: auto 0 0 300px;
+    }
+}
+
+@media (max-width: 1850px){
+    .home .container{
+        margin: auto 0 0 250px;
+    }
+}
+
+
+@media (max-width: 1800px){
+    .home .container{
+        margin: auto 0 0 100px;
+    }
+}
+
+@media (max-width: 1625px){
+    .home .container{
+        margin: auto 0 0 0px;
+    }
+}
+
+@media (max-width: 1550px){
+    .home .container{
+        margin: auto 0 auto 0px;
+    }
+
+    .home .container img{
+        width: 700px;
+    }
+}
+
+@media (max-width: 1425px){
+    .home .container{
+        margin: auto 0 auto 0;
+    }
+
+    .home .container img{
+        width: 600px;
+    }
+}
+
+
+@media (max-width: 1335px){
+    .home .container img{
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 1180px){
+    .home .conteudo-home .texto-2{
+        font-size: 65px;
+    }
+    
+    .home .conteudo-home .texto-3{
+        font-size: 31px;
+    }
+
+    .home .container img{
+        width: 400px;
+    }
+
+    .contato{
+        display: inline-block;
+        align-items: center;
+    }
+
+    .sobre-mim .conteudo-sobre-mim .left img{
+        width: 350px;
+        height: 400px;
+    }
+    
+}  
+
+@media (max-width: 1010px){
+    .sobre-mim .conteudo-sobre-mim .column{
+        width: 50%;
+    }
+
+    .sobre-mim .conteudo-sobre-mim .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .sobre-mim .conteudo-sobre-mim .right{
+        flex: 100%;
+    }
+}
+
+@media (max-width: 980px){
+    .linguagem{
+        width: 26%;        
+        margin: 3% 3%;
+    }
+
+}
+
+@media (max-width: 947px){
+    .max-width{
+        max-width: 800px;
+        padding: 0 50px;
+    }
+    .btn-menu{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        background: #000;
+        padding-top: 80px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .navbar .menu li a:hover{
+        text-decoration: underline;
+        color: #666;
+    }
+
+    .navbar.sticky .menu li a:hover{
+        color: #666;
+        transition: all 0.3s ease;
+        font-weight: 700;
+    }
+
+    .home .conteudo-home .texto-2{
+        font-size: 60px;
+    }
+    .home .conteudo-home .texto-3{
+        font-size: 30px;
+    }
+    .home .conteudo-home a{
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+}
+
+@media (max-width: 895px){
+    
+    .imagem{
+        height: 120px;
+        width: 120px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .linguagem p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 795px){
+    .home .conteudo-home .texto-2{
+        font-size: 55px;
+    }
+    .home .conteudo-home .texto-3{
+        font-size: 25px;
+    }
+    .home .conteudo-home a{
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+    
+    .linguagem{
+        width: 24%;
+        margin: 4% 4%;
+    }
+
+    .imagem{
+        height: 100px;
+        width: 100px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    .linguagem:hover p{
+        display: none;
+    }
+}
+
+@media (max-width: 743px){
+    .home .conteudo-home .texto-2{
+        font-size: 45px;
+    }
+    
+    .home .conteudo-home .texto-3{
+        font-size: 25px;
+    }
+
+    .home .conteudo-home a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 700px){
+    .linguagem{
+        width: 22%;
+        margin: 5% 5%;
+    }
+
+    .imagem{
+        height: 90px;
+        width: 90px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+}
+
+
+@media (max-width: 690px){
+
+    .linguagem{
+        width: 20%;
+        margin: 6% 6%;
+    }
+
+    .linguagem h3{
+        font-size: 16px;
+    }
+
+    .imagem{
+        height: 80px;
+        width: 80px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+
+}
+
+@media (max-width: 675px){
+
+    .linguagem{
+        width: 18%;
+        margin: 7% 7%;
+    }
+
+    .linguagem h3{
+        font-size: 12px;
+    }
+
+    .imagem{
+        height: 60px;
+        width: 60px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+
+}
+
+@media (max-width: 640px){
+
+    .home .conteudo-home .texto-2{
+        font-size: 40px;
+    }
+    
+    .home .conteudo-home .texto-3{
+        font-size: 22px;
+    }
+
+    .home .conteudo-home a{
+        font-size: 16px;
+    }
+
+    .linguagem{
+        width: 16%;
+        margin: 8% 8%;
+    }
+
+    .linguagem h3{
+        font-size: 10px;
+    }
+
+    .imagem{
+        height: 40px;
+        width: 40px;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+
+}
+
+@media(max-width:590px){
+    .home .conteudo-home .texto-2{
+        font-size: 38px;
+    }
+    
+    .home .conteudo-home .texto-3{
+        font-size: 20px;
+    }
+
+    .home .conteudo-home a{
+        font-size: 14px;
+    }
+
+    .sobre-mim .titulo::after{
+        font-size: 20px;
+    }
+
+    .projetos .titulo::after{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:453px){
+    .sobre-mim .titulo::after{
+        font-size: 14px;
+    }
+
+    .projetos .titulo::after{
+        font-size: 14px;
+    }
+}
