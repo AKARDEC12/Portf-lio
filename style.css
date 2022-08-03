@@ -461,46 +461,46 @@ section .titulo::after{
 }
 
 #img-1{
-    background-image: url(/img/html5.png);
+    background-image: url(../img/html5.png);
     
 }
 
 #img-2{
-    background-image: url(/img/css.png); 
+    background-image: url(../img/css.png); 
 }
 
 #img-3{
-    background-image: url(/img/js.png);
+    background-image: url(../img/js.png);
     
 }
 
 #img-4{
-    background-image: url(/img/python.png);
+    background-image: url(../img/python.png);
     
 }
 
 #img-5{
-    background-image: url(/img/bootstrap.svg);
+    background-image: url(../img/bootstrap.svg);
     
 }
 
 #img-6{
-    background-image: url(/img/jquery.png);
+    background-image: url(../img/jquery.png);
     
 }
 
 #img-7{
-    background-image: url(/img/git.png);
+    background-image: url(../img/git.png);
     
 }
 
 #img-8{
-    background-image: url(/img/java.png);
+    background-image: url(../img/java.png);
     
 }
 
 #img-9{
-    background-image: url(/img/php.png);
+    background-image: url(../img/php.png);
     
 }
 
